@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web&display=swap");
+
+:root {
+  --main-bg: #343d46;
+  --color-light: #f7f4f4;
+  --color-light-gray: #a7adba;
+  --color-title: #6a7687;
+  --color-steal-blue: #9dc1d9;
+  --details-light-blue: #bee0ea;
+
+  /*CSS Variables to be altered*/
+  --base: #2b498b;
+  --spacing: 10px;
+  --blur: 10px;
+  --grayscale: 20%;
+  --dark-font-color-title: #173f5f;
+  --nave-light-blue: #20639b;
+  --teal-green: #3caea3;
+  --farting-yellow: #f6d55c;
+  --laranja-orange: #ed553b;
+  --light-font-color: #e5f2fc;
+  --light-font-color-title: #c9dded;
+  --gray-neutral-color: #63717d;
+}
+
+html {
+  box-sizing: border-box;
+  background: #ffc600;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background: var(--light-font-color-title);
+  color: var(--base);
+  font-family: "helvetica neue", sans-serif;
+  font-weight: 80;
+  font-size: 3rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*///////////////////////////
+  //    HEADER Nav Style
+  ///////////////////////////*/
+
+.navbar {
+  height: 50px;
+  background-color: var(--main-bg);
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--details-light-blue);
+}
+
+.navbar img {
+  width: 25px;
+  height: auto;
+}
+.navbar a {
+  text-decoration: none;
+  color: var(--color-light);
+  letter-spacing: 1px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Muli", sans-serif;
+}
+.navbar a:hover {
+  color: var(--color-light-gray);
+}
+
+.navbar-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title h1 {
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-title);
+}
+
+.title h1 i {
+  color: var(--details-light-blue);
+}
+
+/*///////////////////////////
+// END - Navigation Style
+///////////////////////////*/
+
+/*******************************
+*    Image Gallery Content
+*******************************/
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.panel1 {
+  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+}
+.panel2 {
+  background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+}
+.panel3 {
+  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+}
+.panel4 {
+  background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+}
+.panel5 {
+  background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
+}
+
+/* Flex Children */
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: "Amatic SC", cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  font-size: 40px;
+}
+
+/*******************************
+*     Footer and SVG
+*******************************/
+svg {
+  margin-bottom: -35px;
+  z-index: 5;
+}
+footer {
+  font-family: "Shadows Into Light Two", cursive;
+  min-height: 30vh;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+  background-color: var(--nave-light-blue);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+footer span {
+  color: var(--farting-yellow);
+}
+footer img {
+  width: 90px;
+  height: auto;
+}
+
+footer .info-Bruno {
+  width: 70%;
+  padding: 20px;
+  text-align: center;
+}
+
+.info-Bruno p {
+  color: var(--light-font-color-title);
+  font-size: 1.8rem;
+}
+
+.info-Bruno a {
+  color: var(--light-font-color-title);
+  padding: 10px;
+}
+
+.info-Bruno a:hover {
+  color: var(--farting-yellow);
+}
